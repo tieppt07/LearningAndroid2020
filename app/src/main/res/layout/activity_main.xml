@@ -6,48 +6,41 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="451dp"
-        android:layout_height="290dp"
-        android:visibility="visible"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="-25dp"
-        tools:layout_editor_absoluteY="-4dp"
-        tools:srcCompat="@drawable/login_bg"
-        android:contentDescription="@string/Uplabs"
-        tools:visibility="visible" />
-
-    <EditText
-        android:id="@+id/emailInput"
-        android:layout_width="380dp"
-        android:layout_height="55dp"
-        android:autofillHints=""
-        android:background="@drawable/rounded_edittext"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:padding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+    <LinearLayout
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="LabelFor,MissingConstraints"
-        tools:layout_editor_absoluteY="363dp" />
-
-    <EditText
-        android:id="@+id/passwordInput"
-        style="@style/Widget.AppCompat.AutoCompleteTextView"
-        android:layout_width="380dp"
-        android:layout_height="55dp"
-        android:autofillHints=""
+        app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/rounded_edittext"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:padding="10dp"
-        tools:ignore="LabelFor,MissingConstraints"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="439dp" />
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintWidth_percent="0.9"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/emailInput"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:autofillHints=""
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/passwordInput"
+            style="@style/Widget.AppCompat.AutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:autofillHints=""
+            android:hint="Password"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="30dp"
+            android:inputType="textPassword"
+            android:padding="10dp"/>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView"
@@ -60,6 +53,15 @@
         tools:layout_editor_absoluteX="227dp"
         tools:layout_editor_absoluteY="518dp"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="290dp"
+        android:scaleType="fitXY"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/login_bg"/>
 
     <TextView
         android:id="@+id/textView2"
