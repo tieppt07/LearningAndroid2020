@@ -2,16 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.learningandroid2020">
 
-    <shape xmlns:android="http://schemas.android.com/apk/res/android"
-        android:shape="rectangle" android:padding="10dp">
-        <solid android:color="#FFFFFF"/>
-        <corners
-            android:bottomRightRadius="15dp"
-            android:bottomLeftRadius="15dp"
-            android:topLeftRadius="15dp"
-            android:topRightRadius="15dp"/>
-    </shape>
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

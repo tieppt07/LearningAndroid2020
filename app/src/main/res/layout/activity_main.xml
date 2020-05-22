@@ -26,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:autofillHints=""
+            android:layout_marginTop="20dp"
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:padding="10dp" />
@@ -45,13 +46,12 @@
 
     <TextView
         android:id="@+id/forgotPassword"
-        android:layout_width="150dp"
-        android:layout_height="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
         android:text="FORGOT PASSWORD?"
         android:textColor="#b0dee6"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/loginForm"
         app:layout_constraintTop_toBottomOf="@id/loginForm" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -66,33 +66,40 @@
 
         <Button
             android:id="@+id/signInButton"
-            android:layout_alignParentStart="true"
-            android:layout_width="143dp"
-            android:layout_height="47dp"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
             android:background="@drawable/rounded_button"
             android:text="SIGN IN"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
+        <ImageView
             android:id="@+id/fbButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:width="5dp"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/fb"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="267dp"
-            tools:layout_editor_absoluteY="590dp" />
+            android:background="@drawable/bg_twitter"
+            android:padding="10dp"
+            android:src="@drawable/ic_facebook"
+            android:tint="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/twButton"
+            app:layout_constraintStart_toEndOf="@id/signInButton"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/twButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_alignParentEnd="true"
-            android:padding="10dp"
             android:background="@drawable/bg_twitter"
+            android:padding="10dp"
+            android:src="@drawable/ic_twitter"
             android:tint="@android:color/white"
-            android:src="@drawable/ic_twitter" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
@@ -107,9 +114,9 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -125,6 +132,7 @@
             android:id="@+id/signUp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:text="SIGN UP"
             android:textColor="#b0dee6"
             android:textSize="18sp" />
