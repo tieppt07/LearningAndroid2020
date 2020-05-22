@@ -5,14 +5,13 @@
             <!--make a gradient background-->
             <gradient
                 android:type="linear"
-                android:startColor="#002419"
-                android:endColor="#790958"
-                android:centerColor="#00d4ff"
+                android:startColor="#AA95E8"
+                android:endColor="#74C1CE"
+                android:centerColor="#8AADDA"
                 android:angle="90"
                 android:gradientRadius="90"
                 />
             <!--apply a border around button-->
-            <stroke android:color="#006400" android:width="2dp" />
             <!-- make the button corners rounded-->
             <corners android:radius="25dp"/>
         </shape>
