@@ -6,136 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/loginForm"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/rounded_edittext"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.8">
+        android:gravity="center_horizontal"
+        tools:context="com.javasampleapproach.kotlin.httpcall.MainActivity">
 
         <EditText
-            android:id="@+id/emailInput"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:autofillHints=""
-            android:layout_marginTop="20dp"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:padding="10dp" />
-
-        <EditText
-            android:id="@+id/passwordInput"
-            style="@style/Widget.AppCompat.AutoCompleteTextView"
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
-            android:autofillHints=""
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="10dp" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/forgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="FORGOT PASSWORD?"
-        android:textColor="#b0dee6"
-        app:layout_constraintEnd_toEndOf="@id/loginForm"
-        app:layout_constraintTop_toBottomOf="@id/loginForm" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/loginButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@id/loginForm"
-        app:layout_constraintStart_toStartOf="@id/loginForm"
-        app:layout_constraintTop_toBottomOf="@id/loginForm">
+            android:id="@+id/edtCityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:hint="Enter city name"
+            android:inputType="text" />
 
         <Button
-            android:id="@+id/signInButton"
-            android:layout_width="140dp"
-            android:layout_height="50dp"
-            android:background="@drawable/rounded_button"
-            android:text="SIGN IN"
-            android:textColor="#FFFFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/fbButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/bg_twitter"
-            android:padding="10dp"
-            android:src="@drawable/ic_facebook"
-            android:tint="@android:color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/twButton"
-            app:layout_constraintStart_toEndOf="@id/signInButton"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/twButton"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/bg_twitter"
-            android:padding="10dp"
-            android:src="@drawable/ic_twitter"
-            android:tint="@android:color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="290dp"
-        android:scaleType="fitXY"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/login_bg" />
-
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <TextView
-            android:id="@+id/dontHaveAccount"
+            android:id="@+id/btGetInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DONT HAVE AN ACCOUNT?"
-            android:textColor="#070707"
-            android:textSize="18sp" />
+            android:layout_marginTop="20dp"
+            android:text="Get Info" />
 
         <TextView
-            android:id="@+id/signUp"
+            android:id="@+id/tvWeatherInfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:layout_marginStart="10dp"
-            android:text="SIGN UP"
-            android:textColor="#b0dee6"
-            android:textSize="18sp" />
+            android:layout_marginEnd="10dp"
+            android:text="Weather Info"
+            android:textSize="20sp" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
