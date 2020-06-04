@@ -5,6 +5,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,8 +29,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun sendMessage() {
         val newMessage = mapOf(
-            NAME_FIELD to edit_name.text.toString(),
-            TEXT_FIELD to edit_message.text.toString())
+            NAME_FIELD to editName.text.toString(),
+            TEXT_FIELD to editMessage.text.toString())
         firestoreChat.set(newMessage)
             .addOnSuccessListener( {
                 Toast.makeText(this@MainActivity, "Message Sent", Toast.LENGTH_SHORT).show()
@@ -43,7 +44,7 @@ class MainActivity : AppCompatActivity() {
                 e != null -> Log.e("ERROR", e.message)
                 documentSnapshot != null && documentSnapshot.exists() -> {
                     with(documentSnapshot) {
-                        textDisplay.text = "${data[NAME_FIELD]}:${data[TEXT_FIELD]}"
+                        textDisplay.text = "${data?.get(NAME_FIELD)}:${data?.get(TEXT_FIELD)}"
                     }
                 }
             }
