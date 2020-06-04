@@ -7,7 +7,6 @@ import android.util.Log
 import android.view.View
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
-import okhttp3.OkHttpClient
 import java.net.URL
 import org.json.JSONObject
 import android.widget.ListView
